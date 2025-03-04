@@ -1,0 +1,87 @@
+/* src/components/BathroomForm.css */
+
+.floor-sections {
+    margin-top: 2rem;
+  }
+  
+  .floor-section {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #eaeaea;
+  }
+  
+  .floor-section h4 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .no-elevator-badge {
+    background-color: #f39c12;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: normal;
+  }
+  
+  .accessible-details {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 6px;
+    margin-top: 1rem;
+  }
+  
+  .feature-section {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .feature-section:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  
+  .feature-section h5 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  /* 添加到您現有的BathroomForm.css文件中 */
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .status-text {
+    margin-left: 8px;
+    font-size: 0.85em;
+    background-color: #f0f0f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #666;
+  }
+  
+  input[type="checkbox"]:checked + .checkbox-label .status-text {
+    background-color: #e6f7e6;
+    color: #1e7e34;
+  }
+  
+  input[type="checkbox"]:not(:checked) + .checkbox-label .status-text {
+    background-color: #f8f0f0;
+    color: #c93030;
+  }
+  
+  /* 適配禁用狀態 */
+  input[type="checkbox"]:disabled + .checkbox-label {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }

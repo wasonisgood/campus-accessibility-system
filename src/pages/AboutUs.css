@@ -1,0 +1,309 @@
+/* src/pages/AboutUs.css */
+
+.about-us-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  /* 頁面標題區域 */
+  .about-header {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, #3498db, #1abc9c);
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .about-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: white;
+  }
+  
+  .about-header .subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  /* 一般區塊樣式 */
+  .about-section {
+    margin-bottom: 4rem;
+  }
+  
+  .about-section h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.8rem;
+  }
+  
+  .about-section h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #3498db;
+  }
+  
+  .about-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 1.2rem;
+  }
+  
+  /* 使命卡片 */
+  .mission-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .mission-card {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .mission-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mission-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .mission-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+  }
+  
+  .mission-card p {
+    color: #666;
+    margin-bottom: 0;
+  }
+  
+  /* 系統緣起 */
+  .origin-content {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+  
+  .origin-text {
+    flex: 3;
+  }
+  
+  .origin-image {
+    flex: 2;
+  }
+  
+  .placeholder-image {
+    background-color: #e9ecef;
+    border-radius: 8px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6c757d;
+    font-style: italic;
+  }
+  
+  /* 團隊區塊 */
+  .team-section {
+    background-color: #f8f9fa;
+    padding: 3rem;
+    border-radius: 8px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .team-member {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .member-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3498db, #1abc9c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .team-member h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+  }
+  
+  .member-role {
+    color: #3498db;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .member-desc {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  /* 合作夥伴 */
+  .partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .partner-logo {
+    background-color: #f8f9fa;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #555;
+    border: 1px solid #e9ecef;
+  }
+  
+  /* 加入我們區塊 */
+  .join-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .join-card {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .join-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+  }
+  
+  .join-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  
+  .join-link {
+    display: inline-block;
+    color: #3498db;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .join-link:hover {
+    color: #2980b9;
+    text-decoration: underline;
+  }
+  
+  /* 聯繫我們區塊 */
+  .contact-section {
+    background-color: #f8f9fa;
+    padding: 3rem;
+    border-radius: 8px;
+  }
+  
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .contact-icon {
+    font-size: 2rem;
+    color: #3498db;
+  }
+  
+  .contact-detail h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+  }
+  
+  .contact-detail p {
+    margin: 0;
+    color: #666;
+  }
+  
+  /* 響應式設計 */
+  @media (max-width: 768px) {
+    .about-header h1 {
+      font-size: 2.2rem;
+    }
+    
+    .origin-content {
+      flex-direction: column;
+    }
+    
+    .team-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .mission-cards, 
+    .partners-grid, 
+    .join-cards, 
+    .contact-info {
+      grid-template-columns: 1fr;
+    }
+    
+    .about-section p {
+      font-size: 1rem;
+    }
+    
+    .contact-section,
+    .team-section {
+      padding: 1.5rem;
+    }
+  }

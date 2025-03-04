@@ -1,0 +1,38 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 開發模式：允許所有讀寫操作，適用於開發階段
+    match /{document=**} {
+      allow read, write: if true;
+    }
+    
+    /* 
+    以下是可選的，更細緻的規則控制，
+    可以在你準備好時取消註釋並替換上面的寬鬆規則
+    
+    // 允許匿名用戶訪問
+    match /universities/{universityId} {
+      allow read, write: if true;
+    }
+    
+    match /buildings/{buildingId} {
+      allow read, write: if true;
+    }
+    
+    match /bathrooms/{bathroomId} {
+      allow read, write: if true;
+    }
+    
+    // 保留你之前的規則
+    match /aiPolicies/{document=**} {
+      allow read: if true;
+      allow write: if
+        request.resource.data.country is string &&
+        request.resource.data.name is string &&
+        request.resource.data.category is string &&
+        request.resource.data.url is string &&
+        request.resource.data.year is number;
+    }
+    */
+  }
+}

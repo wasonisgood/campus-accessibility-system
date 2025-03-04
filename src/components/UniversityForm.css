@@ -1,0 +1,149 @@
+/* src/components/UniversityForm.css */
+
+.existing-university {
+    background-color: #f5f9fc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border: 1px solid #e1eff9;
+  }
+  
+  .select-container {
+    margin-top: 1rem;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .half {
+    width: 50%;
+  }
+  
+  .help-text {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    border-left: 4px solid #3498db;
+  }
+  
+  .help-text h3 {
+    margin-top: 0;
+    font-size: 1.25rem;
+  }
+  
+  .help-text ol {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .help-text li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .required {
+    color: #e74c3c;
+  }
+  
+  .error {
+    border-color: #e74c3c !important;
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+  
+  @media (max-width: 768px) {
+    .form-row {
+      flex-direction: column;
+    }
+    
+    .half {
+      width: 100%;
+    }
+  }
+  /* 添加到您現有的UniversityForm.css文件中 */
+
+.input-with-icon {
+    position: relative;
+    display: flex;
+    width: 100%;
+  }
+  
+  .location-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+  }
+  
+  .location-btn:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .location-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .location-icon {
+    margin-right: 8px;
+  }
+  
+  .help-text {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 4px;
+  }
+  /* 添加到您現有的UniversityForm.css文件中 */
+
+.input-with-icon {
+    position: relative;
+    display: flex;
+    width: 100%;
+  }
+  
+  .location-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+  }
+  
+  .location-btn:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .location-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .location-icon {
+    margin-right: 8px;
+  }
+  
+  .help-text {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 4px;
+  }

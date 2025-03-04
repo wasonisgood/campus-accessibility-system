@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "nthu-complaints-system"
+  },
+  "targets": {
+    "nthu-complaints-system": {
+      "hosting": {
+        "campus-accessibility-system": [
+          "campus-accessibility-system"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
