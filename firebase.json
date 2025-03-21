@@ -6,6 +6,12 @@
   "hosting": {
     "public": "build",
     "target": "campus-accessibility-system",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -13,3 +19,4 @@
     ]
   }
 }
+

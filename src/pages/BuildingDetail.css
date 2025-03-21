@@ -252,3 +252,335 @@
       grid-template-columns: 1fr;
     }
   }
+  /* src/pages/BuildingDetail.css 增加的樣式 */
+
+/* 特徵類別樣式 */
+.feature-category {
+  margin-bottom: 1.5rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: rgba(245, 247, 250, 0.7);
+}
+
+.feature-category h5 {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #2c3e50;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+}
+
+/* 特徵項目樣式 */
+.feature-item {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.feature-label {
+  font-weight: 500;
+  min-width: 90px;
+  color: #5a6268;
+}
+
+.feature-value {
+  flex: 1;
+}
+
+.feature-value.positive {
+  color: #28a745;
+}
+
+.feature-value.negative {
+  color: #dc3545;
+}
+
+/* 樓層標題與問題計數器 */
+.floor-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.floor-header h4 {
+  margin: 0;
+  margin-right: 0.5rem;
+}
+
+.problem-counter {
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+}
+
+.problem-counter.minor {
+  background-color: #ffc107;
+}
+
+.problem-counter.moderate {
+  background-color: #fd7e14;
+}
+
+.problem-counter.severe {
+  background-color: #dc3545;
+}
+
+/* 問題摘要區塊 */
+.issues-summary {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: #fff8e1;
+  border: 1px dashed #ffca28;
+}
+
+.issues-summary h5 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #b26500;
+}
+
+.issues-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.issue-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.8125rem;
+  color: white;
+  font-weight: 500;
+}
+
+.issue-badge.critical {
+  background-color: #d32f2f;
+}
+
+.issue-badge.major {
+  background-color: #f44336;
+}
+
+.issue-badge.moderate {
+  background-color: #ff9800;
+}
+
+.issue-badge.minor {
+  background-color: #ffca28;
+  color: #6d4c00;
+}
+
+.more-issues {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.8125rem;
+  background-color: #e0e0e0;
+  color: #616161;
+}
+
+/* 標籤式分類檢視 */
+.features-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.features-tabs details {
+  border: 1px solid #e0e0e0;
+  border-radius: 0.375rem;
+  overflow: hidden;
+}
+
+.tab-summary {
+  padding: 0.75rem 1rem;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.tab-summary:hover {
+  background-color: #f0f0f0;
+}
+
+.tab-summary::-webkit-details-marker {
+  display: none;
+}
+
+.tab-summary::after {
+  content: "▼";
+  font-size: 0.75rem;
+  margin-left: auto;
+  transition: transform 0.2s;
+}
+
+details[open] .tab-summary::after {
+  transform: rotate(180deg);
+}
+
+.tab-icon {
+  margin-right: 0.5rem;
+}
+
+.tab-issue-marker {
+  margin-left: 0.5rem;
+  color: #d32f2f;
+}
+
+.tab-summary.critical {
+  background-color: #ffebee;
+  color: #b71c1c;
+}
+
+.critical-issues {
+  background-color: #ffebee;
+  border: 1px solid #ef9a9a;
+}
+
+/* 圖例樣式 */
+.bathroom-issues-legend {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
+}
+
+.legend-title {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #424242;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.legend-description {
+  margin-left: 0.75rem;
+  font-size: 0.875rem;
+  color: #616161;
+}
+
+/* EditBathroom.css 增加的樣式 */
+
+/* 特徵區塊樣式 */
+.feature-section {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+}
+
+.feature-section h5 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+}
+
+/* 子特徵樣式 */
+.sub-feature {
+  margin-bottom: 1.25rem;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  background-color: #ffffff;
+  border: 1px solid #f0f0f0;
+}
+
+/* 表單元素間距 */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+/* 複選框樣式 */
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.checkbox-label {
+  font-weight: normal;
+}
+
+/* 數字輸入框寬度控制 */
+input[type="number"] {
+  width: 100%;
+  max-width: 150px;
+}
+
+/* 下拉選單樣式 */
+select {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  background-color: #fff;
+}
+
+/* 文本框樣式 */
+textarea {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  resize: vertical;
+}
+
+/* 狀態樣式 */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.status-badge.positive {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-badge.negative {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* 無電梯標記 */
+.no-elevator-badge {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+/* 響應式調整 */
+@media (max-width: 768px) {
+  .feature-item {
+    flex-direction: column;
+  }
+  
+  .feature-label {
+    min-width: auto;
+    margin-bottom: 0.25rem;
+  }
+}

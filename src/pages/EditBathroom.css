@@ -231,3 +231,114 @@
       width: 100%;
     }
   }
+  /* 特徵區塊樣式 */
+.feature-section {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+}
+
+.feature-section h5 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+}
+
+/* 子特徵樣式 */
+.sub-feature {
+  margin-bottom: 1.25rem;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  background-color: #ffffff;
+  border: 1px solid #f0f0f0;
+}
+
+/* 表單元素間距 */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+/* 複選框樣式 */
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.checkbox-label {
+  font-weight: normal;
+}
+
+/* 數字輸入框寬度控制 */
+input[type="number"] {
+  width: 100%;
+  max-width: 150px;
+}
+
+/* 下拉選單樣式 */
+select {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  background-color: #fff;
+}
+
+/* 文本框樣式 */
+textarea {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  resize: vertical;
+}
+
+/* 狀態樣式 */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.status-badge.positive {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-badge.negative {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* 無電梯標記 */
+.no-elevator-badge {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+/* 響應式調整 */
+@media (max-width: 768px) {
+  .feature-item {
+    flex-direction: column;
+  }
+  
+  .feature-label {
+    min-width: auto;
+    margin-bottom: 0.25rem;
+  }
+}
