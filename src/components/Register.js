@@ -112,7 +112,7 @@ const Register = () => {
         universityId
       });
       
-      // 添加衛生間信息
+      // 添加廁所資訊
       await addDoc(collection(db, "bathrooms"), {
         ...formData.bathroom,
         buildingId: buildingRef.id

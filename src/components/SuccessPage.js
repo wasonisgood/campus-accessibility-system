@@ -11,7 +11,7 @@ const SuccessPage = ({ universityName, buildingName }) => {
         感謝您為提高校園無障礙環境做出的貢獻！
       </p>
       <div className="submission-details">
-        <h3>您已成功提交以下信息：</h3>
+        <h3>您已成功提交以下資訊：</h3>
         <p><strong>大學：</strong> {universityName}</p>
         <p><strong>建築物：</strong> {buildingName}</p>
       </div>

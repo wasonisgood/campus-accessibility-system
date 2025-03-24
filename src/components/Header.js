@@ -23,6 +23,9 @@ const Header = () => {
             <li>
               <Link to="/about" aria-label="了解我們的使命">關於我們</Link>
             </li>
+            <li>
+              <Link to="/analyticsdashboard" aria-label="資料視覺化">資料視覺化</Link>
+            </li>
           </ul>
         </nav>
         <div className="accessibility-control">

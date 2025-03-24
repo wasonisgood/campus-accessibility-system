@@ -1,0 +1,482 @@
+/* Register.css - 優化註冊頁面樣式 */
+
+:root {
+    --primary-color: #3B82F6;
+    --secondary-color: #10B981;
+    --accent-color: #6366F1;
+    --background-color: #FFFFFF;
+    --light-bg: #F9FAFB;
+    --lighter-bg: #F3F4F6;
+    --text-color: #1F2937;
+    --light-text: #6B7280;
+    --border-color: #E5E7EB;
+    --error-color: #EF4444;
+    --success-color: #10B981;
+    --warning-color: #F59E0B;
+    --option-hover: #EFF6FF;
+    --option-selected: #DBEAFE;
+    --border-radius: 8px;
+    --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+    --transition-speed: 0.2s;
+    --font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  }
+  
+  /* 全局設置 */
+  body {
+    font-family: var(--font-family);
+  }
+  
+  /* 容器樣式 */
+  .register-container {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    animation: fadeIn 0.3s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* 頁面標題 */
+  .register-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .register-header h1 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin: 0 0 10px;
+  }
+  
+  .register-header p {
+    font-size: 1.1rem;
+    color: var(--light-text);
+    margin: 0;
+  }
+  
+  /* 註冊類型選擇 */
+  .registration-type-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .registration-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    text-align: center;
+  }
+  
+  .registration-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+    background-color: var(--option-hover);
+  }
+  
+  .option-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(59, 130, 246, 0.1);
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .option-icon svg {
+    width: 32px;
+    height: 32px;
+    stroke: var(--primary-color);
+  }
+  
+  .registration-option h3 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+  }
+  
+  .registration-option p {
+    margin: 0;
+    color: var(--light-text);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  /* 返回首頁按鈕 */
+  .back-to-home {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* 註冊類型指示器 */
+  .registration-type-indicator {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 6px 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  /* 大學選擇部分 */
+  .university-selection, .building-selection {
+    margin-bottom: 30px;
+  }
+  
+  .university-selection h2, .building-selection h2 {
+    font-size: 1.3rem;
+    margin: 0 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .university-list, .building-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .university-item {
+    position: relative;
+    padding: 16px;
+    background-color: var(--light-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all var(--transition-speed);
+  }
+  
+  .university-item:hover {
+    background-color: var(--option-hover);
+    border-color: var(--primary-color);
+  }
+  
+  .university-item.selected {
+    background-color: var(--option-selected);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+  }
+  
+  .university-item h3 {
+    margin: 0 0 5px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+  }
+  
+  .university-item p {
+    margin: 0;
+    color: var(--light-text);
+    font-size: 0.9rem;
+  }
+  
+  .selected-indicator {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    font-size: 0.8rem;
+  }
+  
+  /* 建築物項目 */
+  .building-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: var(--light-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all var(--transition-speed);
+  }
+  
+  .building-item:hover {
+    background-color: var(--option-hover);
+    border-color: var(--primary-color);
+  }
+  
+  .building-info {
+    flex: 1;
+  }
+  
+  .building-info h3 {
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .building-type {
+    display: inline-block;
+    padding: 3px 8px;
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  
+  .building-info p {
+    margin: 0;
+    color: var(--light-text);
+    font-size: 0.9rem;
+  }
+  
+  .building-desc {
+    margin-top: 5px !important;
+    color: var(--light-text);
+    font-size: 0.85rem !important;
+    max-width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .select-button {
+    padding: 6px 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: var(--border-radius);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background-color var(--transition-speed);
+  }
+  
+  .select-button:hover {
+    background-color: #2563EB;
+  }
+  
+  /* 無數據消息 */
+  .no-data-message {
+    padding: 30px;
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    text-align: center;
+    border: 1px dashed var(--border-color);
+    grid-column: 1 / -1;
+  }
+  
+  .no-data-message p {
+    margin: 0 0 15px;
+    color: var(--light-text);
+    font-size: 1rem;
+  }
+  
+  /* 小型載入指示器 */
+  .loading-mini {
+    padding: 15px;
+    text-align: center;
+    color: var(--light-text);
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    font-size: 0.95rem;
+  }
+  
+  /* 按鈕樣式 */
+  .btn-primary, 
+  .btn-secondary, 
+  .btn-sm {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    text-decoration: none;
+    transition: all var(--transition-speed);
+    cursor: pointer;
+    border: none;
+    font-size: 0.95rem;
+  }
+  
+  .btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .btn-primary:hover {
+    background-color: #2563EB;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-secondary {
+    background-color: var(--lighter-bg);
+    color: var(--text-color);
+    box-shadow: var(--box-shadow);
+  }
+  
+  .btn-secondary:hover {
+    background-color: #E5E7EB;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-sm {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+  
+  .btn-primary:disabled, 
+  .btn-secondary:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  /* 表單操作按鈕 */
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+  }
+  
+  /* 載入動畫 */
+  .loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+  }
+  
+  .loading-spinner {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+  
+  .spinner-circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 4px solid var(--border-color);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  .spinner-circle.inner {
+    width: 70%;
+    height: 70%;
+    top: 15%;
+    left: 15%;
+    border-top-color: var(--accent-color);
+    animation: spin 0.8s linear infinite reverse;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .loading-text {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-top: 10px;
+  }
+  
+  .loading-dots span {
+    animation: dots 1.5s infinite;
+    opacity: 0;
+  }
+  
+  .loading-dots span:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  
+  .loading-dots span:nth-child(3) {
+    animation-delay: 1s;
+  }
+  
+  @keyframes dots {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  /* 錯誤提示 */
+  .error-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    border-left: 5px solid var(--error-color);
+  }
+  
+  .error-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 20px;
+    color: var(--error-color);
+  }
+  
+  /* 響應式設計 */
+  @media (max-width: 768px) {
+    .register-container {
+      padding: 15px;
+    }
+    
+    .registration-type-options {
+      grid-template-columns: 1fr;
+    }
+    
+    .university-list, .building-list {
+      grid-template-columns: 1fr;
+    }
+    
+    .building-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .select-button {
+      margin-top: 10px;
+      align-self: flex-end;
+    }
+    
+    .form-actions {
+      flex-direction: column;
+    }
+    
+    .btn-primary, .btn-secondary {
+      width: 100%;
+    }
+  }

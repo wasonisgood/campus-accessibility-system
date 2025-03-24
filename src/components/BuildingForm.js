@@ -53,9 +53,9 @@ const BuildingForm = ({ formData, updateFormData, nextStep, prevStep }) => {
 
   return (
     <div className="form-container">
-      <h2>第二步：建築物信息</h2>
+      <h2>第二步：建築物資訊</h2>
       <p className="form-description">
-        請提供建築物的詳細信息，這將幫助我們了解建築物的基本結構和無障礙設施的分佈情況。
+        請提供建築物的詳細資訊，這將幫助我們了解建築物的基本結構和無障礙設施的分佈情況。
       </p>
 
       <form onSubmit={handleSubmit}>
@@ -120,7 +120,7 @@ const BuildingForm = ({ formData, updateFormData, nextStep, prevStep }) => {
             value={formData.description || ''}
             onChange={handleChange}
             rows="3"
-            placeholder="請簡要描述該建築物的主要功能、特點等信息（選填）"
+            placeholder="請簡要描述該建築物的主要功能、特點等資訊（選填）"
           />
         </div>
 

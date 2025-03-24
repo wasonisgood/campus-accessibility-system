@@ -1,0 +1,366 @@
+/* AnalyticsDashboard.css - 校園無障礙設施分析儀表板樣式 */
+
+:root {
+    --primary-color: #3B82F6;
+    --secondary-color: #6366F1;
+    --success-color: #10B981;
+    --warning-color: #F59E0B;
+    --danger-color: #EF4444;
+    --orange-color: #F97316;
+    --light-green-color: #84CC16;
+    --text-color: #1F2937;
+    --light-text: #6B7280;
+    --lighter-text: #9CA3AF;
+    --border-color: #E5E7EB;
+    --background-color: #FFFFFF;
+    --light-bg: #F9FAFB;
+    --lighter-bg: #F3F4F6;
+    --blue-bg: rgba(59, 130, 246, 0.1);
+    --green-bg: rgba(16, 185, 129, 0.1);
+    --red-bg: rgba(239, 68, 68, 0.1);
+    --orange-bg: rgba(249, 115, 22, 0.1);
+    --yellow-bg: rgba(245, 158, 11, 0.1);
+    --purple-bg: rgba(99, 102, 241, 0.1);
+    --border-radius: 8px;
+    --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+    --transition-speed: 0.2s;
+    --font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  }
+  
+  /* 儀表板容器 */
+  .dashboard-container {
+    background-color: var(--background-color);
+    padding: 24px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-header {
+    margin-bottom: 32px;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 8px;
+  }
+  
+  .dashboard-header p {
+    color: var(--light-text);
+    font-size: 1rem;
+  }
+  
+  /* 篩選區塊 */
+  .filter-section {
+    background-color: var(--light-bg);
+    padding: 16px;
+    border-radius: var(--border-radius);
+    margin-bottom: 24px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+  }
+  
+  @media (min-width: 768px) {
+    .filter-section {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .filter-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .filter-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 4px;
+  }
+  
+  .filter-select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--background-color);
+    font-size: 0.95rem;
+    color: var(--text-color);
+    transition: border-color var(--transition-speed);
+  }
+  
+  .filter-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+  }
+  
+  .filter-select:disabled {
+    background-color: var(--lighter-bg);
+    cursor: not-allowed;
+  }
+  
+  /* 統計卡片區 */
+  .stats-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+  
+  @media (min-width: 768px) {
+    .stats-cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .stat-card {
+    background-color: var(--background-color);
+    padding: 24px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--border-color);
+  }
+  
+  .stat-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .stat-card-title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--text-color);
+  }
+  
+  .stat-card-icon {
+    padding: 8px;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .stat-card-icon.blue {
+    background-color: var(--blue-bg);
+  }
+  
+  .stat-card-icon.green {
+    background-color: var(--green-bg);
+  }
+  
+  .stat-card-icon.red {
+    background-color: var(--red-bg);
+  }
+  
+  .stat-card-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .stat-card-icon.blue svg {
+    color: var(--primary-color);
+  }
+  
+  .stat-card-icon.green svg {
+    color: var(--success-color);
+  }
+  
+  .stat-card-icon.red svg {
+    color: var(--danger-color);
+  }
+  
+  .stat-card-value {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--text-color);
+  }
+  
+  .stat-card-subtitle {
+    font-size: 0.875rem;
+    color: var(--light-text);
+    margin-top: 8px;
+  }
+  
+  /* 圖表區塊 */
+  .charts-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+  
+  @media (min-width: 768px) {
+    .charts-row.two-columns {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .chart-card {
+    background-color: var(--background-color);
+    padding: 24px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--border-color);
+  }
+  
+  .chart-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 16px;
+  }
+  
+  .chart-container {
+    height: 256px;
+  }
+  
+  .chart-container.large {
+    height: 288px;
+  }
+  
+  /* 排名區塊 */
+  .ranking-card {
+    background-color: var(--background-color);
+    padding: 24px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--border-color);
+  }
+  
+  .ranking-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 16px;
+  }
+  
+  .ranking-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .ranking-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .ranking-position {
+    width: 32px;
+    height: 32px;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    flex-shrink: 0;
+  }
+  
+  .ranking-position.blue {
+    background-color: var(--blue-bg);
+  }
+  
+  .ranking-position.purple {
+    background-color: var(--purple-bg);
+  }
+  
+  .ranking-position-text {
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+  
+  .ranking-position-text.blue {
+    color: var(--primary-color);
+  }
+  
+  .ranking-position-text.purple {
+    color: var(--secondary-color);
+  }
+  
+  .ranking-info {
+    flex-grow: 1;
+  }
+  
+  .ranking-name {
+    font-weight: 500;
+    color: var(--text-color);
+  }
+  
+  .ranking-details {
+    font-size: 0.875rem;
+    color: var(--light-text);
+  }
+  
+  .ranking-progress {
+    width: 96px;
+    flex-shrink: 0;
+  }
+  
+  .progress-bar-bg {
+    height: 8px;
+    background-color: var(--lighter-bg);
+    border-radius: 9999px;
+    overflow: hidden;
+  }
+  
+  .progress-bar-fill {
+    height: 100%;
+    border-radius: 9999px;
+  }
+  
+  .progress-bar-fill.blue {
+    background-color: var(--primary-color);
+  }
+  
+  .progress-bar-fill.purple {
+    background-color: var(--secondary-color);
+  }
+  
+  .no-data {
+    text-align: center;
+    color: var(--light-text);
+    padding: 16px 0;
+  }
+  
+  /* 加載動畫 */
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 384px;
+  }
+  
+  .loading-spinner {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    border-top-color: var(--primary-color);
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* 錯誤訊息 */
+  .error-message {
+    background-color: var(--red-bg);
+    color: var(--danger-color);
+    padding: 16px;
+    border-radius: var(--border-radius);
+    text-align: center;
+  }
+  
+  .error-message-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }

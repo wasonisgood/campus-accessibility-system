@@ -59,7 +59,7 @@ const BathroomForm = ({ formData, buildingData, updateFormData, prevStep, submit
       const hasAnyAccessible = floorData.some(floor => floor.hasAccessible);
       
       if (!hasAnyAccessible) {
-        setErrors({ general: "您已表示該建築有無障礙廁所，請標記至少一個樓層的無障礙廁所信息" });
+        setErrors({ general: "您已表示該建築有無障礙廁所，請標記至少一個樓層的無障礙廁所資訊" });
         return false;
       }
     }
@@ -129,9 +129,9 @@ const BathroomForm = ({ formData, buildingData, updateFormData, prevStep, submit
 
   return (
     <div className="form-container">
-      <h2>第三步：無障礙廁所信息</h2>
+      <h2>第三步：無障礙廁所資訊</h2>
       <p className="form-description">
-        請提供建築物中無障礙廁所的詳細信息，這對行動不便的人士至關重要。
+        請提供建築物中無障礙廁所的詳細資訊，這對行動不便的人士至關重要。
       </p>
 
       {errors.general && (
@@ -197,7 +197,7 @@ const BathroomForm = ({ formData, buildingData, updateFormData, prevStep, submit
 
                 {shouldShowAccessibleDetails(index) && (
                   <div className="accessible-details">
-                    {/* 扶手信息 */}
+                    {/* 扶手資訊 */}
                     <div className="feature-section">
                       <h5>扶手</h5>
                       <div className="form-group checkbox-group">
@@ -249,7 +249,7 @@ const BathroomForm = ({ formData, buildingData, updateFormData, prevStep, submit
                               name="features.handrails.notes"
                               value={floor.features.handrails.notes || ''}
                               onChange={(e) => handleFloorChange(index, e)}
-                              placeholder="可以描述扶手的材質、狀態等信息"
+                              placeholder="可以描述扶手的材質、狀態等資訊"
                               rows="2"
                             />
                           </div>
@@ -257,7 +257,7 @@ const BathroomForm = ({ formData, buildingData, updateFormData, prevStep, submit
                       )}
                     </div>
 
-                    {/* 洗手台信息 */}
+                    {/* 洗手台資訊 */}
                     <div className="feature-section">
                       <h5>洗手台</h5>
                       <div className="form-group checkbox-group">
@@ -309,7 +309,7 @@ const BathroomForm = ({ formData, buildingData, updateFormData, prevStep, submit
                               name="features.sink.notes"
                               value={floor.features.sink.notes || ''}
                               onChange={(e) => handleFloorChange(index, e)}
-                              placeholder="可以描述洗手台的高度、水龍頭類型等信息"
+                              placeholder="可以描述洗手台的高度、水龍頭類型等資訊"
                               rows="2"
                             />
                           </div>
@@ -317,7 +317,7 @@ const BathroomForm = ({ formData, buildingData, updateFormData, prevStep, submit
                       )}
                     </div>
 
-                    {/* 門寬信息 */}
+                    {/* 門寬資訊 */}
                     <div className="feature-section">
                       <h5>門寬</h5>
                       <div className="form-group checkbox-group">
@@ -348,13 +348,13 @@ const BathroomForm = ({ formData, buildingData, updateFormData, prevStep, submit
                           name="features.doorWidth.notes"
                           value={floor.features.doorWidth.notes || ''}
                           onChange={(e) => handleFloorChange(index, e)}
-                          placeholder="可以描述門的開啟方向、具體寬度等信息"
+                          placeholder="可以描述門的開啟方向、具體寬度等資訊"
                           rows="2"
                         />
                       </div>
                     </div>
 
-                    {/* 門鎖信息 */}
+                    {/* 門鎖資訊 */}
                     <div className="feature-section">
                       <h5>門鎖</h5>
                       <div className="form-group checkbox-group">
@@ -385,7 +385,7 @@ const BathroomForm = ({ formData, buildingData, updateFormData, prevStep, submit
                           name="features.doorLock.notes"
                           value={floor.features.doorLock.notes || ''}
                           onChange={(e) => handleFloorChange(index, e)}
-                          placeholder="可以描述門鎖的類型、使用難度等信息"
+                          placeholder="可以描述門鎖的類型、使用難度等資訊"
                           rows="2"
                         />
                       </div>

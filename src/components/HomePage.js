@@ -8,7 +8,7 @@ const HomePage = ({ universities }) => {
       <section className="hero">
         <h1>校園無障礙設施登錄系統</h1>
         <p>幫助建立更加無障礙的校園環境，讓每一位同學都能自由地學習和生活</p>
-        <Link to="/register" className="start-btn" aria-label="開始登錄無障礙設施信息">
+        <Link to="/register" className="start-btn" aria-label="開始登錄無障礙設施資訊">
           開始登錄
         </Link>
       </section>
@@ -40,12 +40,12 @@ const HomePage = ({ universities }) => {
           <div className="step">
             <div className="step-number">1</div>
             <h3>選擇大學</h3>
-            <p>輸入大學信息或從已有列表中選擇</p>
+            <p>輸入大學資訊或從已有列表中選擇</p>
           </div>
           <div className="step">
             <div className="step-number">2</div>
             <h3>添加建築物</h3>
-            <p>提供建築物的基本信息，如類型、樓層和電梯情況</p>
+            <p>提供建築物的基本資訊，如類型、樓層和電梯情況</p>
           </div>
           <div className="step">
             <div className="step-number">3</div>

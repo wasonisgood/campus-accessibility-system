@@ -60,7 +60,7 @@ const UniversityForm = ({ formData, updateFormData, nextStep, universities }) =>
             alert('用戶拒絕了位置請求');
             break;
           case error.POSITION_UNAVAILABLE:
-            alert('位置信息不可用');
+            alert('位置資訊不可用');
             break;
           case error.TIMEOUT:
             alert('請求超時');
@@ -80,9 +80,9 @@ const UniversityForm = ({ formData, updateFormData, nextStep, universities }) =>
 
   return (
     <div className="form-container">
-      <h2>第一步：大學信息</h2>
+      <h2>第一步：大學資訊</h2>
       <p className="form-description">
-        請提供大學的基本信息，這將幫助我們正確地組織和顯示無障礙設施數據。
+        請提供大學的基本資訊，這將幫助我們正確地組織和顯示無障礙設施數據。
       </p>
 
       {universities && universities.length > 0 && (

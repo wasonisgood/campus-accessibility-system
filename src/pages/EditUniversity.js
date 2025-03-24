@@ -29,7 +29,7 @@ const EditUniversity = () => {
         const universityDoc = await getDoc(universityRef);
         
         if (!universityDoc.exists()) {
-          setError('找不到該大學的信息');
+          setError('找不到該大學的資訊');
           setLoading(false);
           return;
         }
@@ -45,7 +45,7 @@ const EditUniversity = () => {
         });
       } catch (error) {
         console.error('Error fetching university:', error);
-        setError('獲取大學信息時發生錯誤');
+        setError('獲取大學資訊時發生錯誤');
       } finally {
         setLoading(false);
       }
@@ -80,7 +80,7 @@ const EditUniversity = () => {
       }, 2000);
     } catch (error) {
       console.error('Error updating university:', error);
-      setError('更新大學信息時發生錯誤');
+      setError('更新大學資訊時發生錯誤');
     } finally {
       setSubmitting(false);
     }
@@ -101,11 +101,11 @@ const EditUniversity = () => {
 
   return (
     <div className="edit-university-container">
-      <h2>編輯大學信息</h2>
+      <h2>編輯大學資訊</h2>
       
       {success && (
         <div className="success-message" role="alert">
-          大學信息更新成功！正在返回詳情頁...
+          大學資訊更新成功！正在返回詳情頁...
         </div>
       )}
       
@@ -227,7 +227,7 @@ const EditUniversity = () => {
             className="btn-primary"
             disabled={submitting}
           >
-            {submitting ? '更新中...' : '更新大學信息'}
+            {submitting ? '更新中...' : '更新大學資訊'}
           </button>
         </div>
       </form>
